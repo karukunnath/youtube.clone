@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>youtube.com</title>
+<link rel="icon" href="favicon.jpg" type="image/icon"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+body
+{
+margin-bottom:60px;
+}
+.thumbnail
+{
+border-radius:10px 10px 10px 10px;
+width:100%;
+display:block;
+}
+.video-title
+{
+font-size:14px;
+font-weight:500;
+line-height:16px;
+margin-bottom:16px;
+}
+.video-author,.video-stats
+{
+display:block;
+font-size:12px;
+color:rgb(96,96,96);
+}.
+video-author
+{
+margin-bottom:6px;
+}
+.channel-picture
+{
+width:50px;
+display:inline-block;
+vertical-align:top;
+margin-top:20px;
+}
+.video-info
+{
+width:200px;
+display:inline-block;
+margin-top:20px;
+}
+.profile-picture
+{
+width:50px;
+border-radius:30px;
+}
+.thumbnail-row
+{
+position:relative;
+margin-top:10 px;
+
+}
+p
+{
+font-family:Roboto,Arial;
+margin-top:0;
+margin-bottom:0;
+}
+.video-info-grid
+{
+display:grid;
+grid-template-columns:50px 1fr;
+}
+.video-grid
+{
+display:grid;
+grid-template-columns:1fr 1fr 1fr ;
+column-gap:25px;
+row-gap:15px;
+padding-left:120px;
+
+
+}
+.video-time
+{
+font-family:Roboto,Arial;
+font-size:12px;
+position:absolute;
+bottom:10px;
+right:5px;
+background-color:black;
+color:white;
+}
+
+.header
+{
+height:40px;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+position:fixed;
+top:0px;
+left:0;
+right:0;
+background-color:white;
+z-index:1;
+}
+.left-section
+{
+display:flex;
+align-items:center;
+}
+.hamburger-menu
+{
+height:20px;
+padding-left:20px;
+padding-right:10px;
+}
+.youtube-logo
+{
+height:20px;
+}
+
+.middle-section
+{
+display:flex;
+flex:1;
+max-width:550px;
+align-items:center;
+}
+.search-bar
+{
+flex:1;
+max-width:500px;
+border-radius:30px;
+height:30px;
+border-width:1px;
+border-style:solid;
+border-color:gray;
+width:0;
+
+}
+.search-bar::placeholder
+{
+font-family:Roboto,Arial;
+padding-left:10px;
+}
+.search-button
+{
+border-width:1px;
+border-style:solid;
+border-color:gray;
+height:34px;
+width:45px;
+margin-right:30px;
+margin-left:-20px;
+border-radius:0px 15px 15px 0px;
+
+}
+.voice-search-button
+{
+border-width:0px;
+border-radius:35px;
+height:30px;
+width:30px;
+
+}
+.right-section
+{
+width:200px;
+display:flex;
+align-items:center;
+flex-shrink:0;
+}
+.click
+{
+height:30px;
+background-color:lightgray;
+border-radius:15px;
+border:none;
+margin-right:20px;
+}
+.notify
+{
+width:30px;
+padding-right:20px;
+}
+.profile
+{
+width:30px;
+border-radius:15px;
+}
+.sidebar
+{
+background-color:white;
+position:fixed;
+left:0;
+bottom:0;
+width:100px;
+top:50px;
+
+}
+.sidebar-link
+{
+	
+	height: 70px;
+	margin-bottom:1px;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction:column;
+}
+.sidebar-link img
+{
+	height:24px;
+
+}
+.sidebar-link div
+{
+	font-family: roboto,arial;
+	font-size:10px;
+
+}
+.sidebar-link:hover
+{
+background-color: lightgrey;
+border-radius:10px 10px 10px 10px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="left-section">
+<img class="hamburger-menu" src="hamburger-menu.svg" >
+<img class="youtube-logo" src="youtube-logo.svg" >
+
+</div>
+<div class="middle-section">
+<input class="search-bar" type="text" placeholder="Search">
+<button class=search-button><img src="search.svg"></button>
+<button class= voice-search-button><img src="voice-search-icon.svg"></button>
+</div>
+<div class="right-section">
+<button class="click"><i class="fa-regular fa-plus"></i> Create</button>
+<img class="notify" src="notifications.svg">
+<img class="profile" src="kb.jpg">
+</div>
+</div>
+<div class="sidebar">
+	<div class="sidebar-link"><img src="home.svg"   ><div>Home</div></div>
+	<div class="sidebar-link"><img src="subscriptions.svg"  ><div>Subscriptions</div></div>
+	<div class="sidebar-link"><img src="your videos.svg" ><div>your videos</div></div>
+	<div class="sidebar-link"><img src="explore.svg"  ><div>Explore</div></div>
+
+
+</div>
+<div class="video-grid">
+<div class="video-preview">
+<div class="thumbnail-row">
+<img class="thumbnail"  src="thumbnail-1.webp">
+<div class="video-time">14:35</div>
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="channel.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">
+Reporter Breaking news</p>
+<p class="video-author">Reporter Live</p>
+<p class="video-stats">3.1 lakh views &#183; 2 days ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<img class="thumbnail" src="thumbnail-2.webp">
+<div class="video-time">8:40</div>
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="PHOTO.jpeg">
+</div>
+<div class="video-info">
+<p class="video-title">
+AI Automation tools </p>
+<p class="video-author">Muhammed kabeer</p>
+<p class="video-stats">19M views &#183; 4 months ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<div class="video-time">22:37</div>
+<img class="thumbnail" src="thumbnail-3.webp">
+<div class="video-time">14:12</div>
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="channel-3.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">
+Google CEO Sundar Pichai and the Future of AI | The Circuit</p>
+<p class="video-author">Bloomberg Official </p>
+<p class="video-stats">3.8M views &#183; 5 months ago   </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<img class="thumbnail" src="thumbnail-4.webp">
+<div class="video-time">32:35</div>
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="channel4.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">
+Html ad css tutorial video </p>
+<p class="video-author">free boot camp</p>
+<p class="video-stats">1M views &#183; 2 months ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<div class="video-time">07:42</div>
+<img class="thumbnail" src="thumbnail-5.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="kb.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">
+Coding Html language </p>
+<p class="video-author">Muhammed Kabeer</p>
+<p class="video-stats">19M views &#183; 2 years ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<div class="video-time">11:25</div>
+<img class="thumbnail" src="thumb-nail-6.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="channel-2.jpeg">
+</div>
+<div class="video-info">
+<p class="video-title">
+Tom and jerry cartoon</p>
+<p class="video-author">Markiplier</p>
+<p class="video-stats">19M views &#183; 4 years ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<img class="thumbnail" src="thumb-nail-7.webp">
+<div class="video-time">12:55</div>
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="channel-3.jpg">
+</div>
+<div class="video-info">
+<p class="video-title">
+Cartoon Malayalam kids</p>
+<p class="video-author">Manjadi</p>
+<p class="video-stats">9M views &#183; 1 years ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<div class="video-time">17:43</div>
+<img class="thumbnail" src="thumbnail-8.webp">
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="PHOTO.jpeg">
+</div>
+<div class="video-info">
+<p class="video-title">
+English Conversation Topics</p>
+<p class="video-author">Muhammed kabeer</p>
+<p class="video-stats">1M views &#183; 6 months ago </p>
+</div>
+</div>
+</div>
+<div class="video-preview">
+<div class="thumbnail-row">
+<img class="thumbnail" src="thumb-nail-9.webp">
+<div class="video-time">24:35</div>
+</div>
+<div class="video-info-grid">
+<div class="channel-picture">
+<img class="profile-picture" src="channel-1.jpeg">
+</div>
+<div class="video-info">
+<p class="video-title">
+speak english confidently!</p>
+<p class="video-author">bbc english</p>
+<p class="video-stats">3.4M views &#183; 6 months ago </p>
+</div>
+</div>
+</div>
+</div>
+</body>
+	<html>
